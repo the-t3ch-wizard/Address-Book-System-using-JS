@@ -9,6 +9,12 @@ class AddressBook {
     this.contacts.push(contact)
   }
 
+  editContact(name, newContact) {
+    let index = this.contacts.findIndex(c => c.firstName === name);
+    if (index === -1) throw new Error("Contact Not Found");
+    this.contacts[index] = newContact;
+  }
+
 }
 
 class AddressBookContact {
