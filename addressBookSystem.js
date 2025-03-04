@@ -21,6 +21,10 @@ class AddressBook {
     this.contacts.splice(index, 1);
   }
 
+  getContactCount() {
+    return this.contacts.reduce(count => count + 1, 0);
+  }
+
 }
 
 class AddressBookContact {
