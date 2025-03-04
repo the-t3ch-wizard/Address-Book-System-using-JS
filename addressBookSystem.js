@@ -15,6 +15,12 @@ class AddressBook {
     this.contacts[index] = newContact;
   }
 
+  deleteContact(name) {
+    let index = this.contacts.findIndex(c => c.firstName === name);
+    if (index === -1) throw new Error("Contact Not Found");
+    this.contacts.splice(index, 1);
+  }
+
 }
 
 class AddressBookContact {
