@@ -48,6 +48,10 @@ class AddressBook {
     return this.contacts.sort((a, b) => a.firstName.localeCompare(b.firstName));
   };
 
+  sortByCityStateZip(key) {
+    return this.contacts.sort((a, b) => a[key].localeCompare(b[key]));
+  };
+
 }
 
 class AddressBookContact {
