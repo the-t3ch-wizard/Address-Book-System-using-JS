@@ -6,6 +6,9 @@ class AddressBook {
   }
 
   addContact(contact) {
+    if (this.contacts.some(c => c.firstName === contact.firstName && c.lastName === contact.lastName)) {
+      throw new Error("Duplicate Contact");
+    }
     this.contacts.push(contact)
   }
 
